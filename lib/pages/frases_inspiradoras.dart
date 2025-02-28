@@ -42,6 +42,7 @@ class FrasesInspiradoras extends StatelessWidget {
   }
 }
 
+// Widget customizado
 class Banner extends StatelessWidget {
   const Banner({
     super.key,
@@ -50,6 +51,7 @@ class Banner extends StatelessWidget {
     required this.autor,
   });
 
+  // Parametros componentizáveis
   final String texto;
   final String autor;
   final MaterialColor cor;
@@ -57,6 +59,7 @@ class Banner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+      // Customização de Container
       child: Container(
         padding: EdgeInsets.all(16),
         margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -78,6 +81,7 @@ class Banner extends StatelessWidget {
                 color: cor.shade700,
               ),
             ),
+            //Widget para utilização de alinhamento independente do alinhamento da coluna
             Align(
               alignment: Alignment.bottomRight,
               child: Text(
