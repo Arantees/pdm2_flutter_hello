@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/pages/counter_page.dart';
 import 'package:hello_flutter/pages/frases_inspiradoras.dart';
+import 'package:hello_flutter/pages/xylophone_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Representação de uma tela Material Design contendo(appBar, body,
+    // floatingActionButton, bottonavigationBar, drawers, bottomSheets, etc)
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -15,12 +18,16 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          // Propriedade de alinhamento de eixo principal (vertical)
           mainAxisAlignment: MainAxisAlignment.center,
+          // Propriedade de alinhamento de eixo cruzado (horizontal)
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // Widget que literalmente é uma caixa com dimensões configuráveis
             SizedBox(width: double.maxFinite),
             FilledButton(
               onPressed: () {
+                // Navegação entre telas utilizando empilhamento de telas.
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -32,6 +39,7 @@ class HomePage extends StatelessWidget {
             ),
             FilledButton(
               onPressed: () {
+                // Navegação entre telas utilizando empilhamento de telas.
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -40,6 +48,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: Text('Frases'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => XylophonePage(),
+                  ),
+                );
+              },
+              child: Text('Xylophone'),
             ),
           ],
         ),
