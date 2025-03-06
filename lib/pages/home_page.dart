@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/pages/counter_page.dart';
 import 'package:hello_flutter/pages/frases_inspiradoras.dart';
+import 'package:hello_flutter/pages/photo_book_page.dart';
 import 'package:hello_flutter/pages/xylophone_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,11 +55,22 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => XylophonePage(),
+                    builder: (context) => MinhaTela(),
                   ),
                 );
               },
-              child: Text('Xylophone'),
+              child: Text('Minha Tela'),
+            ),
+                        FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PhotoBookPage(),
+                  ),
+                );
+              },
+              child: Text('PhoBook'),
             ),
           ],
         ),
